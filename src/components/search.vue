@@ -2,11 +2,11 @@
   <transition name='fade-in-out'>
 	<div class="container">
 		<div class="search-container">
-			<input type="text" autofocus placeholder="一般搜不到你想要的orz,可以试试精确查找" v-model="searchText">
+			<input type="text" autofocus placeholder="Search" v-model="searchText">
 			<div class="search-icon-box" v-show="searchText.trim()" @click='search(searchText)'>
 				<span class="search-icon"></span>
 			</div>
-		</div>  
+		</div>
 		<div class="search-result">
 			<ul>
 				<li v-for="result in list">
@@ -93,7 +93,7 @@
 	.search-container{
 		width:980px;
 		height: 4em;
-		background-color: #fff; 
+		background-color: #fff;
 		position: relative;
         box-shadow: 0 6px 16px 0 rgba(16,16,32,.15);
 	}
@@ -106,8 +106,8 @@
 		font-size: 2em;
 		box-sizing: border-box;
 	}
-	.fade-in-out-enter{		
-		opacity: 0;		
+	.fade-in-out-enter{
+		opacity: 0;
 	}
 	.fade-in-out-enter-active{
         transition:opacity 1s ease;
@@ -125,36 +125,36 @@
     	background-color: #ebebeb;
     }
     .search-icon-box span{
-    	height:40px; 
-    	width:40px; 
-    	display:block; 
+    	height:40px;
+    	width:40px;
+    	display:block;
     	position:relative;
-    } 
+    }
 	.search-icon:before, .search-icon:after{
-		content:''; 
-		height:20px; 
-		display:block; 
-		position:absolute; 
-		top:0; 
-		left:0; 
+		content:'';
+		height:20px;
+		display:block;
+		position:absolute;
+		top:0;
+		left:0;
 	}
 	.search-icon:before{
-		width:20px; 
-		border:3px #20a0ff solid; 
+		width:20px;
+		border:3px #20a0ff solid;
 		border-radius:100%;
 		-webkit-border-radius:100%;
 		-moz-border-radius:100%;
 	}
 
 	.search-icon:after{
-		width:7px; 
-		background:#20a0ff; 
+		width:7px;
+		background:#20a0ff;
 		transform:rotate(-45deg);
 		-webkit-transform:rotate(-45deg);
 		-moz-transform:rotate(-45deg);
 		-o-transform:rotate(-45deg);
-		-ms-transform:rotate(-45deg); 
-		top:17px; 
+		-ms-transform:rotate(-45deg);
+		top:17px;
 		left:24px;
 	}
 	.search-icon-box:hover{
@@ -168,13 +168,13 @@
 	.search-result-list{
 		display: flex;
 		height: 300px;
-		width: 100%;        
-		margin-bottom: 1em;		
+		width: 100%;
+		margin-bottom: 1em;
 		background-color: rgba(32, 160, 255, 0.06);
 		box-shadow: 0 6px 16px rgba(16,16,32,.15);
 
 	}
-	
+
 	.search-result-list img{
 		padding: 5px;
 		height: 300px;
